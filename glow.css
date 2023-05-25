@@ -1,0 +1,43 @@
+:target
+::selection,
+::selection {
+  background: var(--kin);
+  color: var(--oil);
+}
+
+:root:target,
+:root {
+  --oil: gold;
+  --lio: khaki;
+  --ink: purple;
+  --kin: rebeccapurple;
+  background: var(--oil);
+  color: var(--kin);
+}
+
+:active {
+  --oil: var(--lio);
+}
+
+:any-link {
+  color: inherit;
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --kin: var(--ink);
+    --lio: mintcream;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background: var(--kin);
+    color: var(--oil);
+  }
+
+  ::selection {
+    background: var(--oil);
+    color: var(--kin);
+  }
+}
